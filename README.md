@@ -8,5 +8,6 @@ A Single Page Application utilising OpenWeather's API to create a 5-day forecast
 
 -TO DO-
 
-- Create 3x2 grid for storing forecast
-- locate space for min/max temps on weather card to display 
+link future weather trends to 5 day forecast cards
+
+adap background imgs relating to temperature based on API request
