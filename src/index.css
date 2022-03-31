@@ -74,11 +74,11 @@ main {
   text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
 }
 
-.weather-box {
+.weather-box-today {
   text-align: center;
 }
 
-.weather-box .temp {
+.weather-box-today .temp {
   position: relative;
   display: inline-block;
   margin: 30px auto;
@@ -96,9 +96,49 @@ main {
   box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-.weather-box .weather {
+.weather-box-today .weather {
   color: #FFF;
   font-size: 48px;
   font-weight: 700;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+
+.weather-box-tomo {
+  display: grid;
+  text-align: center;
+}
+
+.weather-box-tomo .temp-tomo {
+  position: flex;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+
+  padding: 15px 25px;
+
+  color: #FFF;
+  font-size: 50px;
+  font-weight: 900;
+
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weather-box-tomo .weather-tomo {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.forecast-box {
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+  font-style: italic;
 }

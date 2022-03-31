@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 
 
 const api = {
@@ -57,14 +61,50 @@ function App() {
             <div className="location">{weather.name}, {weather.sys.country}</div>
             <div className="date">{dateBuilder(new Date())}</div>
           </div>
-          <div className="weather-box">
+          <div className="weather-box-today">
             <div className="temp">
               {Math.round(weather.main.temp)}°c
             </div>
             <div className="weather">{weather.weather[0].main}</div>
-            {/* new div goes here, grid for 2 x 3 grid/table for 6 day forecast */}
-          </div>
-        </div>
+            </div>
+            <div className="forecast-box">5 Day Forecast</div>
+            <br>
+            </br>
+            <Container>
+              <Row md={5}>
+                <Col><div className="weather-box-tomo">
+                  <div className='temp-tomo'>
+                    {Math.round(weather.main.temp)}°c
+                  </div>
+                  </div></Col>
+                
+                <Col><div className="weather-box-tomo">
+                  <div className='temp-tomo'>
+                    {Math.round(weather.main.temp)}°c
+                  </div>
+                  </div></Col>
+                               
+                <Col><div className="weather-box-tomo">
+                  <div className="temp-tomo">
+                    {Math.round(weather.main.temp)}°c
+                  </div>
+                  </div></Col>
+                
+                <Col><div className="weather-box-tomo">
+                  <div className="temp-tomo">
+                    {Math.round(weather.main.temp)}°c
+                  </div>
+                  </div></Col>
+
+                <Col><div className="weather-box-tomo">
+                  <div className="temp-tomo">
+                    {Math.round(weather.main.temp)}°c
+                  </div>
+                </div></Col>
+              </Row>
+            </Container>                  
+            </div>     
+            
         ) : ('')}
       </main>
     </div>
