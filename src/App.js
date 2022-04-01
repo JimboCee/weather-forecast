@@ -3,7 +3,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
-
+import Clouds from './images/clouds.png'
+import lgtRain from './images/lgtRain.png'
+import Rain from './images/rain.png'
+import Sunny from './images/sunny.png'
 
 const api = {
   key: "2019a24bf77fd34b8c3b88b01b6fadc9",
@@ -64,6 +67,8 @@ function App() {
           <div className="weather-box-today">
             <div className="temp">
               {Math.round(weather.main.temp)}°c
+              <div className="minmax">Min {Math.round(weather.main.temp_min)}°c<br>
+              </br> Max {Math.round(weather.main.temp_max)}°c</div>
             </div>
             <div className="weather">{weather.weather[0].main}</div>
             </div>
@@ -73,32 +78,37 @@ function App() {
             <Container>
               <Row md={5}>
                 <Col><div className="weather-box-tomo">
+                  <div className="day">Sat</div>
                   <div className='temp-tomo'>
-                    {Math.round(weather.main.temp)}°c
+                    <img src={Clouds} alt='clouds'></img>
                   </div>
                   </div></Col>
                 
                 <Col><div className="weather-box-tomo">
+                <div className="day">Sun</div>
                   <div className='temp-tomo'>
-                    {Math.round(weather.main.temp)}°c
+                  <img src={Sunny} alt='clouds'></img>
                   </div>
                   </div></Col>
                                
                 <Col><div className="weather-box-tomo">
+                <div className="day">Mon</div>
                   <div className="temp-tomo">
-                    {Math.round(weather.main.temp)}°c
+                  <img src={lgtRain} alt='clouds'></img>
                   </div>
                   </div></Col>
                 
                 <Col><div className="weather-box-tomo">
+                <div className="day">Tue</div>
                   <div className="temp-tomo">
-                    {Math.round(weather.main.temp)}°c
+                  <img src={Clouds} alt='clouds'></img>
                   </div>
                   </div></Col>
 
                 <Col><div className="weather-box-tomo">
+                <div className="day">Wed</div>
                   <div className="temp-tomo">
-                    {Math.round(weather.main.temp)}°c
+                  <img src={Rain} alt='clouds'></img>
                   </div>
                 </div></Col>
               </Row>
