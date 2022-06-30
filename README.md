@@ -6,10 +6,10 @@ A Single Page Application utilising OpenWeather's API to create a 5-day forecast
 
 - Cards linked to temperature , dynamic adjustment to fit temperature of location searched.
 
--TO DO-
 
-link future weather trends to 5 day forecast cards
 
-adapt background imgs relating to temperature based on API request
+linking future weather trends to 5 day forecast cards
 
-implement dynamic images for forecast cards
+adapting background imgs relating to temperature based on API request
+
+implementing dynamic images for forecast cards
